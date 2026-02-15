@@ -2,7 +2,7 @@
 ///////////////////////////
 
 
-module tb_rsa_without_timing;
+module tb_rsa;
     reg clk, rst;
     reg wren, rden, ds;
     reg [4:0] pt;
@@ -60,3 +60,4 @@ module tb_rsa_without_timing;
       //  $finish;
     end
 endmodule
+
