@@ -19,58 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//module rsa(clk_o,clk,rst,pt,wren,rden,wraddr,rdaddr,rdaddr1,e_d,d_d,ds,HEX7,HEX6,HEX5,HEX4,HEX3,HEX2);
-//input clk_o;
-//input rst,wren,rden,ds;
-//input [4:0]pt;
-//input [2:0]wraddr;
-//input [2:0]rdaddr;
-//input [2:0]rdaddr1;
-//wire [5:0]dataout;
-//wire [5:0]pt_org;
-//wire [5:0]cipher_text;
-//output e_d,d_d,clk;
-//output [6:0]HEX7;//plain_text_tens
-//output [6:0]HEX6;//plain_text_ones
-//output [6:0]HEX5;//cipher_text_tens
-//output [6:0]HEX4;//cipher_text_ones
-//output [6:0]HEX3;//plaint_text_org_tens
-//output [6:0]HEX2;//plaintext_org_ones
-
-//reg [25:0]count;
-
-//rsa_without_timing r1(clk,rst,pt,wren,rden,wraddr,rdaddr,dataout,pt_org,rdaddr1,e_d,d_d,ds,cipher_text);
-
-//always @ (posedge clk_o)
-//count<=count+1;
-
-//assign clk=count[25];
-
-//wire [3:0]dataout_ones;
-//wire [3:0]pt_org_ones;
-//wire [3:0]cipher_text_ones;
-//wire [3:0]dataout_tens;
-//wire [3:0]pt_org_tens;
-//wire [3:0]cipher_text_tens;
-
-//assign dataout_tens=dataout/4'd10;
-//assign dataout_ones=dataout%4'd10;
-
-//assign cipher_text_tens=cipher_text/4'd10;
-//assign cipher_text_ones=cipher_text%4'd10;
-
-//assign pt_org_tens=pt_org/4'd10;
-//assign pt_org_ones=pt_org%4'd10;
-
-//segment7 s1(dataout_tens,HEX7);
-//segment7 s2(dataout_ones,HEX6);
-//segment7 s3(cipher_text_tens,HEX5);
-//segment7 s4(cipher_text_ones,HEX4);
-//segment7 s5(pt_org_tens,HEX3);
-//segment7 s6(pt_org_ones,HEX2);
-
-//endmodule
-
 module rsa(clk,rst,pt,wren,rden,wraddr,rdaddr,dataout,pt_org,rdaddr1,e_d,d_d,ds,cipher_text );
 input clk;
 input rst                                                                                                                                                                                                                     ,wren,rden,ds;
